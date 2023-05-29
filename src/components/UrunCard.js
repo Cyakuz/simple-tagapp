@@ -1,7 +1,7 @@
 import React from 'react';
-import Bilesen from './Bilesen';
 
-const UrunTablo = (props) => {
+
+const UrunCard = (props) => {
   return (
 
     <div>
@@ -11,6 +11,7 @@ const UrunTablo = (props) => {
       ürün="Pasta No:0"
       adet= {10}
       fiyat={240}/>
+    
       </div>
   )
 
