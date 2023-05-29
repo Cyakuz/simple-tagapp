@@ -1,5 +1,5 @@
 .section_our_solution .row {
-  align-items: center;
+  align-items: flex-start;
 }
 
 .our_solution_category {
@@ -28,7 +28,7 @@
 }
 
 .solution_cards_box .solution_card:hover {
-  background: #309df0;
+  background: #f03030;
   color: #fff;
   transform: scale(1.02);
   z-index: 9;
@@ -58,45 +58,7 @@
 
 .solution_cards_box .solution_card:hover .solu_description button {
   background: #fff !important;
-  color: #309df0;
-}
-
-.solution_card .so_top_icon {
-}
-
-.solution_card .solu_title h3 {
-  color: #212121;
-  font-size: 1.3rem;
-  margin-top: 13px;
-  margin-bottom: 13px;
-}
-
-.solution_card .solu_description p {
-  font-size: 15px;
-  margin-bottom: 15px;
-}
-
-.solution_card .solu_description button {
-  border: 0;
-  border-radius: 15px;
-  background: linear-gradient(
-    140deg,
-    #42c3ca 0%,
-    #42c3ca 50%,
-    #42c3cac7 75%
-  ) !important;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 5px 16px;
-}
-
-.our_solution_content h1 {
-  text-transform: capitalize;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-}
-.our_solution_content p {
+  color: #ff0000;
 }
 
 .hover_color_bubble {
@@ -116,23 +78,6 @@
 
 .solution_cards_box .solution_card:hover .hover_color_bubble {
   top: 0rem;
-}
-
-.solution_cards_box .solution_card .so_top_icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #fff;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.solution_cards_box .solution_card .so_top_icon img {
-  width: 40px;
-  height: 50px;
-  object-fit: contain;
 }
 
 /*start media query*/
