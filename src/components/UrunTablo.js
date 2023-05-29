@@ -9,7 +9,7 @@ const UrunTablo = (props) => {
       <hr/>
       <Bilesen 
       ürün="Pasta No:0"
-      adet= {10}
+      uyari= {10}
       fiyat={240}/>
       </div>
   )

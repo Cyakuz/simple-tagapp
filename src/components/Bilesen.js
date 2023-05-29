@@ -3,12 +3,12 @@ import React, { Component } from 'react'
 
 class Bilesen extends Component {
   render() {
-  const {ürün,adet,fiyat} = this.props; //destructing özelliği
-  return( <div className="h2">
+  const {ürün,uyari,fiyat} = this.props; //destructing özelliği
+  return( <div>
     <ul>
-   <li>Ürün Adı: {ürün} </li>
-   <li>Adet: {adet}</li>
-   <li>Fiyat: {fiyat}</li>
+   <li><h4>Bileşenler:</h4> {ürün} </li>
+   <li><h4>Uyarı:</h4> {uyari}</li>
+   <li><h4>Fiyatı:</h4>{fiyat}</li>
    </ul>
   </div>
     )

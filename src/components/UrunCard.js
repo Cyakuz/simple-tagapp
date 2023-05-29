@@ -1,20 +1,27 @@
 import React from 'react';
-
+import UrunTablo from './UrunTablo';
 
 const UrunCard = (props) => {
   return (
 
-    <div>
-      <h1>{props.title}</h1>
-      <hr/>
-      <Bilesen 
-      ürün="Pasta No:0"
-      adet= {10}
-      fiyat={240}/>
-    
+  <div class="section_our_solution">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="our_solution_category">
+          <div class="solution_cards_box">
+            <div class="solution_card">
+              <div class="hover_color_bubble"></div>
+                <div class="solu_description">
+                  <UrunTablo title={props.title}/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
   )
 
 }
 
-export default UrunTablo;
+export default UrunCard;
