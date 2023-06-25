@@ -2,6 +2,7 @@ import React from 'react';
 import UrunTablo from './UrunTablo';
 
 const UrunCard = (props) => {
+  
   return (
 
   <div class="section_our_solution">
