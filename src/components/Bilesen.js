@@ -30,7 +30,8 @@ class Bilesen extends Component {
                   <p className="flex flex-column">{urunBilesen}</p>
                 </li>
                 <li>
-                  <h4>Uyarı:</h4> {uyari}
+                  <h4>Uyarı:</h4> 
+                  <p className="flex flex-column">{uyari}</p>
                 </li>
                 <li>
                   <h4>Fiyatı:</h4>
