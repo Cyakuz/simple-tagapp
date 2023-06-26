@@ -8,7 +8,7 @@
     0 5px 15px 0 rgba(37, 44, 97, 0.15);
   border-radius: 15px;
   margin: 15px;
-  padding: 15px 15px;
+  padding: 15px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -25,21 +25,19 @@
 
 .hover_color_bubble {
   position: absolute;
-  background: rgb(54 81 207 / 15%);
-  width: 100rem;
-  height: 100rem;
+  background: rgba(54, 81, 207, 0.15); /* Modified to use rgba for better readability */
+  width: 100rem; /* Potential typo or excessive value for width, may need adjustment */
+  height: 100rem; /* Potential typo or excessive value for height, may need adjustment */
   left: 0;
   right: 0;
   z-index: -1;
   top: 16rem;
   border-radius: 50%;
-  transform: rotate(-36deg);
-  left: -18rem;
+  transform: rotate(-36deg); /* Potential transformation that may need further consideration for accessibility */
+  left: -18rem; /* Potential excessive value, may need adjustment */
   transition: 0.7s;
 }
 
 .solution_cards_box .solution_card:hover .hover_color_bubble {
   top: 0rem;
 }
-
-
