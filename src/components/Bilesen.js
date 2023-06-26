@@ -16,7 +16,7 @@ class Bilesen extends Component {
   };
 
   render() {
-    const { ürün, uyari, fiyat } = this.props; //destructuring özelliği
+    const { urunBilesen, uyari, fiyat } = this.props; //destructuring özelliği
     const { isVisible } = this.state;
 
     return (
@@ -27,7 +27,7 @@ class Bilesen extends Component {
               <ul className="flex col-12" style={{ listStyle: 'none' }}>
                 <li>
                   <h4>Bileşenler:</h4>
-                  <p className="flex flex-column">{ürün}</p>
+                  <p className="flex flex-column">{urunBilesen}</p>
                 </li>
                 <li>
                   <h4>Uyarı:</h4> {uyari}

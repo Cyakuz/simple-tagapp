@@ -9,11 +9,13 @@ export class UrunProvider extends Component {
         id: "1",
         title: "Pasta No: 0",
         fiyat: "240",
+        urunBilesen: "Fıstık, Kaju"
       },
       {
         id: "2",
         title: "Pasta No: 1",
         fiyat: "240",
+        urunBilesen: "Süt Ürünleri"
       },
     ]
   }

@@ -15,7 +15,7 @@ const UrunCard = (props) => {
                     <div key={urun.id} className="solution_card">
                       <div className="hover_color_bubble"></div>
                       <div className="solu_description">
-                        <UrunTablo title={urun.title} fiyat={urun.fiyat} />
+                        <UrunTablo title={urun.title} fiyat={urun.fiyat} urunBilesen={urun.urunBilesen} />
                       </div>
                     </div>
                   ))}

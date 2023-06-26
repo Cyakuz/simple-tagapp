@@ -8,7 +8,7 @@ const UrunTablo = (props) => {
       <h2>{props.title}</h2>
       <hr />
       <Bilesen
-        ürün="Buğday, Un, Süt, Yumurta, Ekmek, Çilek, Portakal"
+        urunBilesen={props.urunBilesen}
         uyari="Alerjen Madde İçerebilir."
         fiyat={props.fiyat}
         imgsrc={props.imgsrc}
