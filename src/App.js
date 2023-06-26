@@ -11,8 +11,8 @@ export default function App() {
     <div>
 
 
-<UrunCard title="Pasta No: 0" fiyat={240}/>
-<UrunCard title = "Pasta No: 1" fiyat={320}/>
+
+<UrunCard />
 
     </div>
   );
