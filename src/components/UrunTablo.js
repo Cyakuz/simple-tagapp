@@ -10,7 +10,9 @@ const UrunTablo = (props) => {
       <Bilesen 
       ürün="Buğday, Un, sut, Yumurta, Ekmek, Çilek, Portakal"
       uyari= "Alerjen Madde İçerebilir."
-      fiyat= {props.fiyat}/>
+      fiyat= {props.fiyat}
+      imgsrc = {props.imgsrc}/>
+      
       </div>
   )
 

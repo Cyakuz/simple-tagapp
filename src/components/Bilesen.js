@@ -18,8 +18,8 @@ class Bilesen extends Component {
    
   <div>
    {
-      isVisible ?   <div><ul className="d-flex col-12" style={{listStyle:'none'}}>
-      <li><h4>Bileşenler:</h4> <p className="d-flex flex-column" > {ürün} </p> </li>
+      isVisible ?   <div><ul className="flex col-12" style={{listStyle:'none'}}>
+      <li><h4>Bileşenler:</h4> <p className="flex flex-column" > {ürün} </p> </li>
       <li><h4>Uyarı:</h4> {uyari}</li>
       <li><h4>Fiyatı:</h4>{fiyat}</li> 
       </ul>
