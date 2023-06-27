@@ -1,8 +1,10 @@
-import React from "react";
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import UrunCard from './components/UrunCard';
+
 import MenuTabs from './components/MenuTabs';
-import Dolap from './components/Dolap'; // Import the Dolap component
+import Dolap from './scenes/Dolap';
+import Tezgah from './scenes/Tezgah';
+import Icecekler from './scenes/Icecekler';
 
 export default function App() {
   return (
@@ -10,9 +12,11 @@ export default function App() {
       <main>
         <MenuTabs />
         <Routes>
-          <Route path='/dolap' element={<Dolap />} /> {/* Use the Dolap component as the element */}
+          <Route path='/dolap' element={<Dolap />} /> 
+          <Route path='/tezgah' element={<Tezgah />} /> 
+          <Route path='/icecekler' element={<Icecekler />} /> 
         </Routes>
-        <UrunCard />
+       
       </main>
     </Router>
   );
