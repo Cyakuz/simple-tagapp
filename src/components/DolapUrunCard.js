@@ -2,7 +2,7 @@ import React from 'react';
 import UrunTablo from './UrunTablo';
 import { UrunConsumer } from '../Context';
 
-const UrunCard = (props) => {
+const DolapUrunCard = (props) => {
   return (
     <UrunConsumer>
       {value => (
@@ -11,14 +11,15 @@ const UrunCard = (props) => {
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="our_solution_category">
                 <div className="solution_cards_box">
-                  {value.urunler.map(urun => (
-                    <div key={urun.id} className="solution_card">
-                      <div className="hover_color_bubble"></div>
-                      <div className="solu_description">
-                        <UrunTablo title={urun.title} fiyat={urun.fiyat} urunBilesen={urun.urunBilesen} />
+                  {value.urunler.filter(urun => urun.tur === 'dolap') 
+                    .map(urun => (
+                      <div key={urun.id} className="solution_card">
+                        <div className="hover_color_bubble"></div>
+                        <div className="solu_description">
+                          <UrunTablo title={urun.title} fiyat={urun.fiyat} urunBilesen={urun.urunBilesen} />
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               </div>
             </div>
@@ -29,4 +30,4 @@ const UrunCard = (props) => {
   );
 }
 
-export default UrunCard;
+export default DolapUrunCard;

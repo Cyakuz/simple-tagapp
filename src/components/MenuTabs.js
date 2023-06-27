@@ -1,7 +1,9 @@
 import React from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import UrunCard from '../components/UrunCard';
+import DolapUrunCard from '../components/DolapUrunCard';
+import IcecekUrunCard from '../components/IcecekUrunCard';
+import TezgahUrunCard from '../components/TezgahUrunCard';
 
 function MenuTabs() {
   return (
@@ -12,13 +14,13 @@ function MenuTabs() {
     fill
   >
     <Tab eventKey="dolap" title="Dolap">
-      <UrunCard/>
+      <DolapUrunCard/>
     </Tab>
     <Tab eventKey="tezgah" title="Tezgah">
-      Gelecek...
+      <TezgahUrunCard/>
     </Tab>
     <Tab eventKey="içecekler" title="İçecekler">
-      Gelecek...
+      <IcecekUrunCard/>
     </Tab>
   </Tabs>
   );
