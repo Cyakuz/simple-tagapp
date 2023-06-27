@@ -11,13 +11,13 @@ function MenuTabs() {
     className="mb-3"
     fill
   >
-    <Tab eventKey="dolap" title="Home">
+    <Tab eventKey="dolap" title="Dolap">
       <UrunCard/>
     </Tab>
     <Tab eventKey="tezgah" title="Tezgah">
       Gelecek...
     </Tab>
-    <Tab eventKey="İçecekler" title="Contact">
+    <Tab eventKey="içecekler" title="İçecekler">
       Gelecek...
     </Tab>
   </Tabs>
