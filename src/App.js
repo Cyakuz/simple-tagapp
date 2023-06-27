@@ -5,19 +5,17 @@ import MenuTabs from './components/MenuTabs';
 import Dolap from './scenes/Dolap';
 import Tezgah from './scenes/Tezgah';
 import Icecekler from './scenes/Icecekler';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import MenuTabs from './components/MenuTabs';
+
 
 export default function App() {
   return (
-    <Router> {/* Wrap your routes with the Router component */}
       <main>
-        <MenuTabs />
-        <Routes>
-          <Route path='/dolap' element={<Dolap />} /> 
-          <Route path='/tezgah' element={<Tezgah />} /> 
-          <Route path='/icecekler' element={<Icecekler />} /> 
-        </Routes>
+    <MenuTabs/>
        
       </main>
-    </Router>
+
   );
 }
