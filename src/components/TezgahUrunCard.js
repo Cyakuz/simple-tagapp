@@ -1,33 +1,31 @@
 import React from 'react';
-import UrunTablo from './UrunTablo';
-import { UrunConsumer } from '../Context';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import DolapUrunCard from '../components/DolapUrunCard';
+import IcecekUrunCard from '../components/IcecekUrunCard';
+import TezgahUrunCard from '../components/TezgahUrunCard';
 
-const DolapUrunCard = (props) => {
+function MenuTabs({ admin }) {
   return (
-    <UrunConsumer>
-      {value => (
-        <section className="section_our_solution">
-          <div className="row">
-            <div className="col-lg-12 col-md-12 col-sm-12">
-              <div className="our_solution_category">
-                <div className="solution_cards_box">
-                  {value.urunler.filter(urun => urun.tur === 'tezgah') 
-                    .map(urun => (
-                      <div key={urun.id} className="solution_card">
-                        <div className="hover_color_bubble"></div>
-                        <div className="solu_description">
-                          <UrunTablo title={urun.title} fiyat={urun.fiyat} urunBilesen={urun.urunBilesen} />
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+    <Tabs defaultActiveKey="dolap" id="menutabs" className="mb-3" fill>
+      <Tab eventKey="dolap" title="Dolap">
+        <DolapUrunCard admin={admin} />
+      </Tab>
+      <Tab eventKey="tezgah" title="Tezgah">
+        <TezgahUrunCard admin={admin} />
+      </Tab>
+      <Tab eventKey="içecekler" title="İçecekler">
+        <IcecekUrunCard admin={admin} />
+      </Tab>
+      {admin && (
+        <Tab eventKey="admin" title="Admin">
+          <DolapUrunCard admin={admin} />
+          <IcecekUrunCard admin={admin} />
+          <TezgahUrunCard admin={admin} />
+        </Tab>
       )}
-    </UrunConsumer>
+    </Tabs>
   );
 }
 
-export default DolapUrunCard;
+export default MenuTabs;

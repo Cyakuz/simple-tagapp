@@ -3,7 +3,8 @@ import { UrunConsumer } from '../Context';
 
 class Bilesen extends Component {
   state = {
-    isVisible: false
+    isVisible: false,
+    admin: false 
   };
 
   toggleVisibility = () => {
@@ -20,7 +21,7 @@ class Bilesen extends Component {
 
   render() {
     const { urunBilesen, uyari, fiyat } = this.props;
-    const { isVisible } = this.state;
+    const { isVisible, admin } = this.state;
 
     return (
       <UrunConsumer>
@@ -55,15 +56,17 @@ class Bilesen extends Component {
                       aria-expanded={isVisible}
                       aria-label="Hide Content"
                     ></i>
-                    <i
-                      className="fa-solid fa-trash"
-                      onClick={this.toggleVisibility}
-                      onKeyDown={this.handleKeyDown}
-                      tabIndex={0}
-                      role="button"
-                      aria-expanded={isVisible}
-                      aria-label="Delete Content"
-                    ></i>
+                    {admin && (
+                      <i
+                        className="fa-solid fa-trash"
+                        onClick={this.toggleVisibility}
+                        onKeyDown={this.handleKeyDown}
+                        tabIndex={0}
+                        role="button"
+                        aria-expanded={isVisible}
+                        aria-label="Delete Content"
+                      ></i>
+                    )}
                   </ul>
                 </div>
               ) : (
@@ -77,15 +80,17 @@ class Bilesen extends Component {
                     aria-expanded={isVisible}
                     aria-label="Show Content"
                   ></i>
-                  <i
-                    className="fa-solid fa-trash"
-                    onClick={this.toggleVisibility}
-                    onKeyDown={this.handleKeyDown}
-                    tabIndex={0}
-                    role="button"
-                    aria-expanded={isVisible}
-                    aria-label="Delete Content"
-                  ></i>
+                  {admin && (
+                    <i
+                      className="fa-solid fa-trash"
+                      onClick={this.toggleVisibility}
+                      onKeyDown={this.handleKeyDown}
+                      tabIndex={0}
+                      role="button"
+                      aria-expanded={isVisible}
+                      aria-label="Delete Content"
+                    ></i>
+                  )}
                 </ul>
               )}
             </div>
