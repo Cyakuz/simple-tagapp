@@ -4,7 +4,6 @@ import { UrunConsumer } from '../Context';
 class Bilesen extends Component {
   state = {
     isVisible: false,
-    admin: false 
   };
 
   toggleVisibility = () => {
@@ -21,7 +20,7 @@ class Bilesen extends Component {
 
   render() {
     const { urunBilesen, uyari, fiyat } = this.props;
-    const { isVisible, admin } = this.state;
+    const { isVisible} = this.state;
 
     return (
       <UrunConsumer>
@@ -56,7 +55,7 @@ class Bilesen extends Component {
                       aria-expanded={isVisible}
                       aria-label="Hide Content"
                     ></i>
-                    {admin && (
+                    
                       <i
                         className="fa-solid fa-trash"
                         onClick={this.toggleVisibility}
@@ -66,7 +65,7 @@ class Bilesen extends Component {
                         aria-expanded={isVisible}
                         aria-label="Delete Content"
                       ></i>
-                    )}
+                    
                   </ul>
                 </div>
               ) : (
@@ -80,7 +79,7 @@ class Bilesen extends Component {
                     aria-expanded={isVisible}
                     aria-label="Show Content"
                   ></i>
-                  {admin && (
+                  
                     <i
                       className="fa-solid fa-trash"
                       onClick={this.toggleVisibility}
@@ -90,7 +89,7 @@ class Bilesen extends Component {
                       aria-expanded={isVisible}
                       aria-label="Delete Content"
                     ></i>
-                  )}
+                  
                 </ul>
               )}
             </div>
