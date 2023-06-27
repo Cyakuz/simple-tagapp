@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 
 const UrunContext = React.createContext();
 
+const reducer = (state,action) => {
+  switch(action.type){
+    case "DELETE_URUN":
+    return{
+      ...state,
+      urunler: state.urunler.filter(urunler => action.payload !== urunler.id)
+    }
+     default:
+     return state
+  }
+}
+
 export class UrunProvider extends Component {
   state = {
     urunler: [
@@ -33,7 +45,10 @@ export class UrunProvider extends Component {
         urunBilesen: "Nane",
         tur: "tezgah",
       },
-    ]
+    ],
+      dispatch: action => {
+      this.setState(state => reducer(state,action))
+    }
   }
 
   render() {

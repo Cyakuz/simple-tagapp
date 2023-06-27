@@ -22,6 +22,11 @@ function MenuTabs() {
     <Tab eventKey="içecekler" title="İçecekler">
       <IcecekUrunCard/>
     </Tab>
+    <Tab eventKey="admin" title="Admin">
+      <DolapUrunCard/>
+      <IcecekUrunCard/>
+      <TezgahUrunCard/>
+    </Tab>
   </Tabs>
   );
 }
