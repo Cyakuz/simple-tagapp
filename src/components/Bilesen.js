@@ -45,7 +45,7 @@ class Bilesen extends Component {
                       {fiyat}
                     </li>
                   </ul>
-                  <ul>
+                  <ul className="d-flex justify-content-between">
                     <i
                       className="fa-solid fa-angle-down"
                       onClick={this.toggleVisibility}
@@ -69,7 +69,7 @@ class Bilesen extends Component {
                   </ul>
                 </div>
               ) : (
-                <ul>
+                <ul className="d-flex justify-content-between">
                   <i
                     className="fa-solid fa-angle-down"
                     onClick={this.toggleVisibility}

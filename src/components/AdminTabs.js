@@ -5,28 +5,27 @@ import DolapUrunCard from '../components/DolapUrunCard';
 import IcecekUrunCard from '../components/IcecekUrunCard';
 import TezgahUrunCard from '../components/TezgahUrunCard';
 
-function MenuTabs() {
+function AdminTabs() {
   return (
     <Tabs
-    defaultActiveKey="dolap"
+    defaultActiveKey="sil"
     id="menutabs"
     className="mb-3"
     fill
   >
-    <Tab eventKey="dolap" title="Dolap">
+    <Tab eventKey="sil" title="Sil">
       <DolapUrunCard/>
-    </Tab>
-    <Tab eventKey="tezgah" title="Tezgah">
       <TezgahUrunCard/>
-    </Tab>
-    <Tab eventKey="içecekler" title="İçecekler">
       <IcecekUrunCard/>
     </Tab>
-    <Tab eventKey="giriş" title="Giriş" >
-     Login Screen
+    <Tab eventKey="ekle" title="Tezgah">
+      ekle
+    </Tab>
+    <Tab eventKey="dashboard" title="Dashboard">
+      dashboard
     </Tab>
   </Tabs>
   );
 }
 
-export default MenuTabs;
+export default AdminTabs;
