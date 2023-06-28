@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { UrunConsumer } from '../Context';
 import { useLocation } from 'react-router-dom';
 
-const Bilesen = ({ urunBilesen, uyari, fiyat }) => {
+const Bilesen = ({ urunBilesen, uyari, fiyat , id })  => { //Destruction
   const [isVisible, setIsVisible] = useState(false);
   const [admintools, setAdmintools] = useState(false);
   const location = useLocation();
@@ -28,6 +28,10 @@ const Bilesen = ({ urunBilesen, uyari, fiyat }) => {
       setAdmintools(false);
     }
   }, [location]);
+
+  const onDeleteUrun = (dispatch, id) => {
+     dispatch({ type: 'DELETE_URUN', payload: id }); 
+    };
 
   return (
     <UrunConsumer>
@@ -62,14 +66,14 @@ const Bilesen = ({ urunBilesen, uyari, fiyat }) => {
                     aria-label="Hide Content"
                   ></i>
                   {admintools && (
-                    <i
-                      className="fa-solid fa-trash"
-                      onClick={toggleAdminTools}
-                      onKeyDown={handleKeyDown}
-                      tabIndex={0}
-                      aria-expanded={admintools}
-                      aria-label="Delete Content"
-                    ></i>
+                 <i
+                 className="fa-solid fa-trash"
+                 onClick={() => onDeleteUrun(dispatch, id)}
+                 onKeyDown={handleKeyDown}
+                 tabIndex={0}
+                 aria-expanded={admintools}
+                 aria-label="Delete Content"
+               ></i>
                   )}
                 </ul>
               </div>
@@ -84,14 +88,14 @@ const Bilesen = ({ urunBilesen, uyari, fiyat }) => {
                   aria-label="Show Content"
                 ></i>
                 {admintools && (
-                  <i
-                    className="fa-solid fa-trash"
-                    onClick={toggleAdminTools}
-                    onKeyDown={handleKeyDown}
-                    tabIndex={0}
-                    aria-expanded={admintools}
-                    aria-label="Delete Content"
-                  ></i>
+                <i
+                className="fa-solid fa-trash"
+                onClick={() => onDeleteUrun(dispatch, id)}
+                onKeyDown={handleKeyDown}
+                tabIndex={0}
+                aria-expanded={admintools}
+                aria-label="Delete Content"
+              ></i>
                 )}
               </ul>
             )}
