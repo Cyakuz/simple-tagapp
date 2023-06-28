@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
-import {UrunProvider} from "./Context";
+import { UrunProvider } from "./Context";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.scss';
-import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(
-<UrunProvider> 
-  
-   <App />
-    
-    </UrunProvider>
-    , document.getElementById('root'));
+const rootElement = document.getElementById('root');
+
+createRoot(rootElement).render(
+  <UrunProvider>
+    <App />
+  </UrunProvider>
+);
