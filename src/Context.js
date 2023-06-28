@@ -7,7 +7,7 @@ const reducer = (state,action) => {
     case "DELETE_URUN":
     return{
       ...state,
-      urunler: state.urunler.filter(urunler => action.payload !== urunler.id)
+      urunler: state.urunler.filter(urun => action.payload !== urun.id)
     }
      default:
      return state
