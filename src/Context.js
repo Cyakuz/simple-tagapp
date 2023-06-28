@@ -9,6 +9,11 @@ const reducer = (state,action) => {
       ...state,
       urunler: state.urunler.filter(urun => action.payload !== urun.id)
     }
+    case "URUN_EKLE":
+      return{
+        ...state,
+        urunler: [...state.urunler,action.payload]
+      }
      default:
      return state
   }
