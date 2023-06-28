@@ -11,7 +11,7 @@ const DolapUrunCard = (props) => {
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="our_solution_category">
                 <div className="solution_cards_box">
-                  {value.urunler.filter(urun => urun.tur === 'icecek') 
+                  {value.urunler.filter(urun => urun.tur === 'tezgah') 
                     .map(urun => (
                       <div key={urun.id} className="solution_card">
                         <div className="hover_color_bubble"></div>

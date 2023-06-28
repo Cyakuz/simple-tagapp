@@ -35,10 +35,6 @@ class Bilesen extends Component {
     }
   }
 
-  onDeleteUrun = (dispatch, e) => {
-    const {id} = this.props;
-    dispatch({ type: 'DELETE_URUN', payload: id });
-  };
 
   render() {
     const { urunBilesen, uyari, fiyat} = this.props;
@@ -48,6 +44,11 @@ class Bilesen extends Component {
       <UrunConsumer>
         {(value) => {
           const { dispatch } = value;
+
+          const onDeleteUrun = (e) => {
+            const { id } = this.props;
+            dispatch({ type: 'DELETE_URUN', payload: id });
+          };
 
           return (
             <div>
@@ -79,7 +80,7 @@ class Bilesen extends Component {
                     {admintools && (
                       <i
                         className="fa-solid fa-trash"
-                        onClick={this.onDeleteUrun.bind(this,dispatch)}
+                        onClick={onDeleteUrun}
                         onKeyDown={this.handleKeyDown}
                         tabIndex={0}
                         aria-expanded={admintools}
@@ -101,7 +102,7 @@ class Bilesen extends Component {
                   {admintools && (
                     <i
                       className="fa-solid fa-trash"
-                      onClick= {this.onDeleteUrun.bind(this,dispatch)}
+                      onClick= {onDeleteUrun}
                       onKeyDown={this.handleKeyDown}
                       tabIndex={0}
                       aria-expanded={admintools}

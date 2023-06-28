@@ -4,11 +4,11 @@ import Tabs from 'react-bootstrap/Tabs';
 import DolapUrunCard from '../components/DolapUrunCard';
 import IcecekUrunCard from '../components/IcecekUrunCard';
 import TezgahUrunCard from '../components/TezgahUrunCard';
-
+import UrunEkleForm from '../components/UrunEkle';
 function AdminTabs() {
   return (
     <Tabs
-    defaultActiveKey="sil"
+    defaultActiveKey="ekle"
     id="menutabs"
     className="mb-3"
     fill
@@ -18,8 +18,8 @@ function AdminTabs() {
       <TezgahUrunCard/>
       <IcecekUrunCard/>
     </Tab>
-    <Tab eventKey="ekle" title="Tezgah">
-      ekle
+    <Tab eventKey="ekle" title="Ekle">
+      <UrunEkleForm/>
     </Tab>
     <Tab eventKey="dashboard" title="Dashboard">
       dashboard
