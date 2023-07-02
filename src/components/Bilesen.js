@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { UrunConsumer } from '../Context';
-
+import axios from 'axios';
 
 class Bilesen extends Component {
   state = {
@@ -35,20 +35,30 @@ class Bilesen extends Component {
     }
   }
 
+  onDeleteUrun = (id, dispatch) => {
+    axios
+      .delete(`http://localhost:3000/urunler/${id}`)
+      .then(response => {
+        if (response.status === 200) {
+          dispatch({ type: 'DELETE_URUN', payload: id });
+          console.log('Item deleted');
+        } else {
+          console.error('Error:', response.statusText);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  };
 
   render() {
-    const { urunBilesen, uyari, fiyat} = this.props;
+    const { urunBilesen, uyari, fiyat, id } = this.props;
     const { isVisible, admintools } = this.state;
 
     return (
       <UrunConsumer>
         {(value) => {
           const { dispatch } = value;
-
-          const onDeleteUrun = (e) => {
-            const { id } = this.props;
-            dispatch({ type: 'DELETE_URUN', payload: id });
-          };
 
           return (
             <div>
@@ -77,16 +87,6 @@ class Bilesen extends Component {
                       aria-expanded={isVisible}
                       aria-label="Hide Content"
                     ></i>
-                    {admintools && (
-                      <i
-                        className="fa-solid fa-trash"
-                        onClick={onDeleteUrun}
-                        onKeyDown={this.handleKeyDown}
-                        tabIndex={0}
-                        aria-expanded={admintools}
-                        aria-label="Delete Content"
-                      ></i>
-                    )}
                   </ul>
                 </div>
               ) : (
@@ -102,7 +102,7 @@ class Bilesen extends Component {
                   {admintools && (
                     <i
                       className="fa-solid fa-trash"
-                      onClick= {onDeleteUrun}
+                      onClick={() => this.onDeleteUrun(id, dispatch)}
                       onKeyDown={this.handleKeyDown}
                       tabIndex={0}
                       aria-expanded={admintools}
