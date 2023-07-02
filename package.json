@@ -12,10 +12,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
-    "react-particles-js": "^3.6.0",
     "react-router-dom": "^6.14.1",
-    "react-stickies": "^0.0.16",
-    "react-typed": "^1.2.0",
     "tsparticles": "^2.10.1",
     "uniqid": "^5.4.0"
   },
@@ -28,8 +25,16 @@
   "devDependencies": {
     "react-scripts": "latest"
   },
-  "stackblitz": {
-    "startCommand": "json-server --watch api/db.json"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
-
 }

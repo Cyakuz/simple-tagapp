@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import uniqid from 'uniqid';
 import {UrunConsumer} from '../Context';
 
-var uniqid = require('uniqid'); 
+
 
 class UrunEkleForm extends Component {
   state ={

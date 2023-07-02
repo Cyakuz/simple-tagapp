@@ -19,7 +19,7 @@ const reducer = (state,action) => {
   }
 }
 
-export class UrunProvider extends Component {
+class UrunProvider extends Component {
   state = {
     urunler: [],
       dispatch: action => {
