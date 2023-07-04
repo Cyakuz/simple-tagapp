@@ -2,7 +2,7 @@ import React from 'react';
 import UrunTablo from './UrunTablo';
 import { UrunConsumer } from '../Context';
 
-const DolapUrunCard = (props) => {
+const DolapUrunCard = () => {
   return (
     <UrunConsumer>
       {value => (
@@ -11,12 +11,18 @@ const DolapUrunCard = (props) => {
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="our_solution_category">
                 <div className="solution_cards_box">
-                  {value.urunler.filter(urun => urun.tur === 'dolap') 
+                  {value.urunler
+                    .filter(urun => urun.tur === 'dolap')
                     .map(urun => (
                       <div key={urun.id} className="solution_card">
                         <div className="hover_color_bubble"></div>
                         <div className="solu_description">
-                          <UrunTablo title={urun.title} fiyat={urun.fiyat} urunBilesen={urun.urunBilesen} />
+                          <UrunTablo
+                            title={urun.title}
+                            fiyat={urun.fiyat}
+                            urunBilesen={urun.urunBilesen}
+                            id={urun.id} // Pass the id prop
+                          />
                         </div>
                       </div>
                     ))}

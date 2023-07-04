@@ -1,3 +1,4 @@
 # react-bs-ogrenme-repo
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-bootstraap-w1vugu)
+Json Server: npx json-server --watch api/db.json port:3000
+React Sever: npm start

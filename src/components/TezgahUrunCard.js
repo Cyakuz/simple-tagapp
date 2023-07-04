@@ -2,7 +2,7 @@ import React from 'react';
 import UrunTablo from './UrunTablo';
 import { UrunConsumer } from '../Context';
 
-const DolapUrunCard = (props) => {
+const TezgahUrunCard = (props) => {
   return (
     <UrunConsumer>
       {value => (
@@ -16,7 +16,7 @@ const DolapUrunCard = (props) => {
                       <div key={urun.id} className="solution_card">
                         <div className="hover_color_bubble"></div>
                         <div className="solu_description">
-                          <UrunTablo title={urun.title} fiyat={urun.fiyat} urunBilesen={urun.urunBilesen} />
+                          <UrunTablo title={urun.title} fiyat={urun.fiyat} urunBilesen={urun.urunBilesen} id={urun.id} />
                         </div>
                       </div>
                     ))}
@@ -30,4 +30,4 @@ const DolapUrunCard = (props) => {
   );
 }
 
-export default DolapUrunCard;
+export default TezgahUrunCard;

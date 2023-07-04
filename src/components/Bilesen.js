@@ -35,6 +35,13 @@ class Bilesen extends Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.id !== prevProps.id && this.props.id) { // Add a check for the existence of id
+      const { id, dispatch } = this.props;
+      this.onDeleteUrun(id, dispatch);
+    }
+  }
+
   onDeleteUrun = (id, dispatch) => {
     axios
       .delete(`http://localhost:3000/urunler/${id}`)
