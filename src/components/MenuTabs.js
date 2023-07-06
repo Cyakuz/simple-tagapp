@@ -4,11 +4,12 @@ import Tabs from 'react-bootstrap/Tabs';
 import DolapUrunCard from '../components/DolapUrunCard';
 import IcecekUrunCard from '../components/IcecekUrunCard';
 import TezgahUrunCard from '../components/TezgahUrunCard';
+import Login from '../components/Login'
 
 function MenuTabs() {
   return (
     <Tabs
-    defaultActiveKey="dolap"
+    defaultActiveKey="giriş"
     id="menutabs"
     className="mb-3"
     fill
@@ -23,7 +24,7 @@ function MenuTabs() {
       <IcecekUrunCard/>
     </Tab>
     <Tab eventKey="giriş" title="Giriş" >
-     Login Screen
+     <Login/>
     </Tab>
   </Tabs>
   );
