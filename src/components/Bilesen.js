@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { UrunConsumer } from '../Context';
-import axios from 'axios';
 
 class Bilesen extends Component {
   state = {
@@ -36,17 +35,18 @@ class Bilesen extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.id !== prevProps.id && this.props.id) { // Add a check for the existence of id
+    if (this.props.id !== prevProps.id && this.props.id) { 
       const { id, dispatch } = this.props;
       this.onDeleteUrun(id, dispatch);
     }
   }
 
   onDeleteUrun = (id, dispatch) => {
-    axios
-      .delete(`http://localhost:3000/urunler/${id}`)
+    fetch(`http://localhost:3000/urunler/${id}`, {
+      method: 'DELETE'
+    })
       .then(response => {
-        if (response.status === 200) {
+        if (response.ok) {
           dispatch({ type: 'DELETE_URUN', payload: id });
           console.log('Item deleted');
         } else {
@@ -57,6 +57,7 @@ class Bilesen extends Component {
         console.error('Error:', error);
       });
   };
+  
 
   render() {
     const { urunBilesen, uyari, fiyat, id } = this.props;

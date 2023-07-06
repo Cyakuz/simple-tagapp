@@ -27,17 +27,27 @@ class UrunProvider extends Component {
     }
   }
   componentDidMount = async () => {
-    const response = await axios.get("http://localhost:3000/urunler")
-    this.setState({
-      urunler: response.data
-    })
+    try {
+      const response = await fetch("http://localhost:3000/urunler");
+      if (response.ok) {
+        const data = await response.json();
+        this.setState({
+          urunler: data
+        });
+      } else {
+        console.error('Error:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
+  
   render() {
     return (
       <UrunContext.Provider value={this.state}>
         {this.props.children}
       </UrunContext.Provider>
-    )
+    );
   }
 }
 

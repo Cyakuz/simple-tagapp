@@ -1,5 +1,4 @@
 import React from 'react';
-import MenuTabs from './components/MenuTabs';
 import {Routes, Route} from "react-router-dom";
 import Admin from "./scenes/admin";
 import Index from "./scenes/index";
