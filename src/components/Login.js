@@ -40,11 +40,11 @@ export default function Login() {
                   <div className="login">
                     <div className="group">
                       <label htmlFor="user" className="label">Username</label>
-                      <input id="user" type="text" className="input" placeholder="Enter your username" style={{color: "#ffff"}}/>
+                      <input id="user" type="text" className="input" value={username} onChange={handleUsernameChange} placeholder="Enter your username" style={{color: "#ffff"}}/>
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label">Password</label>
-                      <input id="pass" type="password" className="input" data-type="password" placeholder="Enter your password" style={{color: "#ffff"}}/>
+                      <input id="pass" type="password" className="input" data-type="password" value={password} onChange={handlePasswordChange} placeholder="Enter your password" style={{color: "#ffff"}}/>
                     </div>
 
                     <div className="group">
