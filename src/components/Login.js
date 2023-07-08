@@ -40,11 +40,11 @@ export default function Login() {
                   <div className="login">
                     <div className="group">
                       <label htmlFor="user" className="label">Username</label>
-                      <input id="user" type="text" className="input" placeholder="Enter your username" />
+                      <input id="user" type="text" className="input" placeholder="Enter your username" style={{color: "#ffff"}}/>
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label">Password</label>
-                      <input id="pass" type="password" className="input" data-type="password" placeholder="Enter your password" />
+                      <input id="pass" type="password" className="input" data-type="password" placeholder="Enter your password" style={{color: "#ffff"}}/>
                     </div>
 
                     <div className="group">
@@ -78,9 +78,6 @@ export default function Login() {
                       <input type="submit" className="button" value="Sign Up" />
                     </div>
                     <div className="hr"></div>
-                    <div className="foot">
-                      <label htmlFor="tab-1">Already Member?</label>
-                    </div>
                   </div>
                 </div>
               </div>
