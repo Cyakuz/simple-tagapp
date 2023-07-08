@@ -80,7 +80,7 @@
 .login-box{
 	width:100%;
 	max-width:380px;
-	min-height:520px;
+	min-height:530px;
 	position:relative;
 	background:url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80) no-repeat center;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
@@ -151,7 +151,7 @@
 }
 
 .login-space .group .label{
-	color:rgb(243, 208, 208);
+	color:rgb(229, 206, 206);
 	font-size:12px;
 }
 .login-space .group .button{
@@ -202,12 +202,12 @@ a{color:inherit;text-decoration:none}
 .hr{
 	height:2px;
 	margin:60px 0 50px 0;
-	background:rgba(255,255,255,.2);
+	background:rgba(238, 212, 212, 0.2);
 }
 .foot{
 	text-align:center;
 }
 
 ::placeholder{
-color: #b3b3b3;
+color: #eec7c7;
 } 
