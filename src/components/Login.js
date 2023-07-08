@@ -46,38 +46,17 @@ export default function Login() {
                       <label htmlFor="pass" className="label">Password</label>
                       <input id="pass" type="password" className="input" data-type="password" value={password} onChange={handlePasswordChange} placeholder="Enter your password" style={{color: "#ffff"}}/>
                     </div>
-
                     <div className="group">
                       <input type="submit" className="button" value="Sign In" />
                     </div>
-
-                    <div className="hr"></div>
-                    <div className="foot">
+                    <div className="hr" ></div>
+                    <div className="foot" style={{color: "#ffff"}}>
                       <a href="#">Forgot Password?</a>
                     </div>
                   </div>
                   </form>
                   <div className="sign-up-form">
-                    <div className="group">
-                      <label htmlFor="user" className="label">Username</label>
-                      <input id="user" type="text" className="input" placeholder="Create your Username" />
-                    </div>
-                    <div className="group">
-                      <label htmlFor="pass" className="label">Password</label>
-                      <input id="pass" type="password" className="input" data-type="password" placeholder="Create your password" />
-                    </div>
-                    <div className="group">
-                      <label htmlFor="pass" className="label">Repeat Password</label>
-                      <input id="pass" type="password" className="input" data-type="password" placeholder="Repeat your password" />
-                    </div>
-                    <div className="group">
-                      <label htmlFor="pass" className="label">Email Address</label>
-                      <input id="pass" type="text" className="input" placeholder="Enter your email address" />
-                    </div>
-                    <div className="group">
-                      <input type="submit" className="button" value="Sign Up" />
-                    </div>
-                    <div className="hr"></div>
+                    <div className="hr text-center" style={{color: "#ffff"}}> ŞUAN İÇİN AKTİF ÜYE KAYDI YOKTUR!</div>
                   </div>
                 </div>
               </div>
