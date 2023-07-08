@@ -20,7 +20,7 @@ export default function Login() {
       // Redirect to the /admin path
       window.location.href = '/admin';
     } else {
-      // Display an error message or take appropriate action for failed login
+      window.location.href = '/'; //sonradan hata mesajı ver.
     }
   };
 
@@ -40,11 +40,11 @@ export default function Login() {
                   <div className="login">
                     <div className="group">
                       <label htmlFor="user" className="label">Username</label>
-                      <input id="user" type="text" className="input" placeholder="Enter your username" />
+                      <input id="user" type="text" className="input" value={username} onChange={handleUsernameChange} placeholder="Enter your username" />
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label">Password</label>
-                      <input id="pass" type="password" className="input" data-type="password" placeholder="Enter your password" />
+                      <input id="pass" type="password" className="input" data-type="password" placeholder="Enter your password" value={password} onChange={handlePasswordChange}  />
                     </div>
 
                     <div className="group">
