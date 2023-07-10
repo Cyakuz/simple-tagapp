@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios'
 const UrunContext = React.createContext();
 
 const reducer = (state,action) => {
